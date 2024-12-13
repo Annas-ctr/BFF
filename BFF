@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Friend - Adaptive Personality</title>
+    <style>
+        /* General body styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0; /* Light gray background */
+            color: #333; /* Dark gray text */
+        }
+
+        h1, h2 {
+            color: #333; /* Dark gray text for headings */
+            font-weight: 300;
+        }
+
+        h1 {
+            font-size: 2.5em;
+        }
+
+        h2 {
+            font-size: 2em;
+        }
+
+        p {
+            font-size: 1.1em;
+            line-height: 1.6;
+        }
+
+        /* Header and navigation styles */
+        header {
+            background-color: #222; /* Dark gray for header */
+            padding: 20px 0;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff; /* White text for links */
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Section styles */
+        section {
+            padding: 40px 20px;
+            margin: 20px auto;
+            width: 80%;
+            max-width: 1000px;
+            background-color: #fff; /* White background for sections */
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Button styles */
+        button {
+            background-color: #555; /* Dark gray button */
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background-color: #444; /* Slightly darker gray on hover */
+        }
+
+        /* Form styling */
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        label {
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        input, textarea {
+            padding: 10px;
+            font-size: 1.1em;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        textarea {
+            resize: vertical;
+        }
+
+        input:focus, textarea:focus {
+            border-color: #555;
+        }
+
+        /* Footer styles */
+        footer {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#history">History</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <h1>Welcome to AI Friend</h1>
+        <p>Your adaptive personality AI companion. Chat and experience an AI that mirrors your texting style.</p>
+        <button onclick="startChat()">Start Chat</button>
+    </section>
+
+    <section id="about">
+        <h2>About Us</h2>
+        <p>At AI Friend, we aim to create an AI experience that feels personal and tailored to you. Using advanced natural language processing, our AI adapts its tone, style, and personality based on how you interact with it.</p>
+    </section>
+
+    <section id="services">
+        <h2>Services</h2>
+        <ul>
+            <li>Real-time adaptive personality chat</li>
+            <li>Customizable AI responses</li>
+            <li>Sentiment and tone analysis</li>
+        </ul>
+    </section>
+
+    <section id="history">
+        <h2>History</h2>
+        <p>AI Friend was born from the idea that artificial intelligence should not feel robotic but rather, human-like. Our journey began in 2024 with a small team passionate about creating meaningful AI interactions.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 AI Friend. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Function to simulate starting the chat
+        function startChat() {
+            alert('Chat started! Feel free to interact with the AI.');
+        }
+
+        // Handle the contact form submission
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault();  // Prevent the form from submitting normally
+
+            // Get form values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Simulate form submission success
+            if (name && email && message) {
+                alert('Thank you, ' + name + '! Your message has been sent successfully.');
+                document.getElementById('contactForm').reset();  // Reset the form
+            } else {
+                alert('Please fill in all fields before submitting.');
+            }
+        });
+    </script>
+</body>
+</html>
